@@ -1,0 +1,98 @@
+@use 'variaveis';
+
+.hero {
+    padding: 5.6vw;
+    min-height: 80vh;
+    text-align: left;
+    
+    
+    &__bgimg {
+        background-repeat: no-repeat;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-image: url(../images/fundoHero2.jpeg);
+        background-size: cover;
+        background-position: 50%;
+        position: absolute;
+        z-index: -1;
+
+        @media (max-width: 768px) {
+            background-image: url(../images/hero_celular.jpeg);
+            padding-top: calc(50vw + 25px);
+            background-size:contain;
+            background-repeat: no-repeat;
+            margin-top: -55px;
+            background-position: 50%;
+        }
+    }
+ 
+
+    button { 
+        margin-top: 2vw;
+        margin-bottom: 20px;
+        height: 68px;
+        padding: 20.5px 33px;
+        max-width: 500px;
+    }
+    // pega a imagem de fundo e preenche todo o container, preservando a proporção da IMAGEM.
+
+    &__content {
+        max-width: 640px;
+        &--text {
+            color: #f9f9f9;
+            text-align: inherit;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        &__branding {
+            max-width: 180px;
+            margin: 0 0 38px;
+
+
+            @media (max-width: 768px) {
+                max-width: 180px;
+                margin-bottom: 0;
+            }
+        }
+
+        .title--small {
+            margin-bottom: 64px;
+        }
+
+        p {
+            margin-bottom: 20px;
+
+            &:last-child {
+                // ultimo P do CONTENT, logo o que está abaixo do valor dos preços.
+                margin-top: 60px;
+            }
+        }
+
+        &__combos {
+            display: flex;
+            justify-content: space-between;
+            
+            @media (max-width: 768px) {
+                display: block;
+                
+            }
+
+            &__combo {
+                width: calc(50% - 12px);
+                // calculo de margem no caso seria os 50% da tela - 12px (24 que tem entre os elementos/2)
+                img {
+                    max-height: 60px;
+                }
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                    margin-bottom: 34px;
+                }
+            }
+        }
+
+    }
+}
