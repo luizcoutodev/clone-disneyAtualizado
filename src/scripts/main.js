@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function(){
     window.addEventListener('scroll', function(){
         const position =  window.scrollY;
 
-        if (position < heroHeight) {
-            ocultaElementoHeader();
-        } else {
-            exibeElementosHeader();
-        }
+        // if (position < heroHeight) {
+        //     ocultaElementoHeader();
+        // } else {
+        //     exibeElementosHeader();
+        // }
     
     })
     

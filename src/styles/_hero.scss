@@ -5,6 +5,10 @@
     min-height: 80vh;
     text-align: left;
     
+    @media only screen and (max-width: 768px) {
+    padding-top: 44vw;
+    padding: 40vw 5vw 20vw;
+    }
     
     &__bgimg {
         background-repeat: no-repeat;
@@ -19,7 +23,7 @@
         z-index: -1;
 
         @media (max-width: 768px) {
-            background-image: url(../images/hero_celular.jpeg);
+            background-image: url(https://cnbl-cdn.bamgrid.com/assets/606aa81816e77100f993fa0504b6b42c5396f63507e3a5e83bb151dcd7832e35/original);
             padding-top: calc(50vw + 25px);
             background-size:contain;
             background-repeat: no-repeat;
@@ -35,16 +39,32 @@
         height: 68px;
         padding: 20.5px 33px;
         max-width: 500px;
+
+        @media (max-width: 768px) {
+            height: 50px;
+            font-size: 15px;
+        }
     }
     // pega a imagem de fundo e preenche todo o container, preservando a proporção da IMAGEM.
 
     &__content {
         max-width: 640px;
+
+        @media (max-width: 768px) {
+            text-align: center;
+            h1 {
+                margin-bottom: 24px;
+            }
+        }
         &--text {
             color: #f9f9f9;
             text-align: inherit;
             font-size: 20px;
             line-height: 30px;
+
+            @media (max-width: 768px) {
+                font-size: 16px;
+            }
         }
 
         &__branding {
@@ -53,8 +73,10 @@
 
 
             @media (max-width: 768px) {
-                max-width: 180px;
-                margin-bottom: 0;
+                max-width: 130px;
+                margin-bottom: 3vw;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
 

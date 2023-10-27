@@ -1,57 +1,183 @@
+@use 'variaveis';
+
 .plans {
     padding:5.6vw;
-    h2 {
+
+
+
+    &_align-center {
         text-align: center;
     }
 
-    button {
-        margin-top: 2vw;
-        margin-bottom: 8px;
-    }
+   
+   .check-img {
+        background-image: url(https://cnbl-cdn.bamgrid.com/assets/82a511852ed8a12b4eb71493852ee6f622b553c6eb6aaca3d9331ecf63a414b9/original);
+        background-size: 21px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        height: 60px;
+   }
 
-    &__list {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 50px ;
+   .minus-img {
+        background-image: url(https://cnbl-cdn.bamgrid.com/assets/9d8d466c67cf56386ce216b719eae8b51a3d7be8f28dd2e49afc2b58cfdfd877/original);
+        background-size: 37px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        height: 60px;
+    }
+    
+    .chart-column-badge {
+        background-color: #f9f9f9;
+        border-radius: 20px;
+        color: #040714;
+        display: inline-flex;
+        font-weight: 700;
+        padding: 5px 12px;
+        max-width: 130px;
+        position:absolute;
+        justify-content: center;
+        top: -15px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
 
         @media (max-width: 768px) {
-            display: block;
+            font-size: 12px;
+            max-width: 120px;
+        }
+    }
+
+    .button {
+        width: 50%;
+        margin: 0 auto;
+        padding: 8px 14px;
+        height: 50px;
+        max-width: 260px;
+        border: none;
+        font-size: 14px;
+        margin-top: 8px;
+
+        @media (max-width: 768px) {
+            width: 100%;
         }
         
-        .button {
-            margin-top: 24px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 20px;
+        
+        @media (max-width: 768px) {
+            font-size: 24px;
+        }
+    }
+
+    
+
+    &__chart {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding-bottom: 15px;
+
+        &--columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
         }
 
-        &__item {
-            text-align: center;
-            padding: 60px 44px 44px;
-            max-width: 380px;
+        &__row {
+            border-bottom: 1px solid hsla(0,0%,75%,.3);
             width: 100%;
 
-            @media (max-width: 768px) {
-                padding: 0;
-                padding-bottom: 10px;
+
+            &--feature {
+                &--coll-item {
+                    align-items: center;
+                    display: flex;
+                    text-align: left;
+                    
+                    p {
+                        margin: 0;
+
+                        @media (max-width:768px) {
+                            margin: 10px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                &-cell-content {
+                    align-items: center;
+                    box-sizing: border-box;
+                    padding: 33px 8px;
+                    text-align: center;
+
+                    &--small {
+                        padding: 16px 8px;
+                        text-align: center;
+
+                        p {
+                            margin: 19px
+                        }
+                    }
+
+                    
+                }
+
+                &--highlight{
+                    background-color: variaveis.$corDeFundoPlanoClaro;
+                }
             }
 
-            &:nth-child(2) {
-                background-image: url(../images/fundo_combo_plus.png);
-                background-repeat: no-repeat;
-                background-size: contain; 
-                // contain = escala a imagem para que ela contenha a proporção de acordo com a classe de qual pertence.
-            }
+            &--header {
+                position: sticky;
+                padding-top: 84px;
+                border-bottom: 1px solid #f9f9f9;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                background-color: variaveis.$corDeFundo;
+                
+                p {
+                    font-size: 16px;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
 
-            img {
-                height: 83px;
-            }
-            
-            strong {
-                display: block;
-                margin-top: 24px;
+                &-feature {
+                    border-top: 2px solid hsla(0,0%,100%,.1);
+                    padding: 30px 12px;
+                    position: relative;
+                    text-align: center;
+
+                    .disneystarplus {
+                        max-width: 130px;
+
+                        @media (max-width: 768px) {
+                            max-width: 80px;
+                        }
+                    }
+                    
+                    img {
+                        height: auto;
+                        max-width: 100px;
+                        width: 100%;
+                        justify-content: center;
+
+                        @media (max-width: 768px) {
+                            max-width: 60px;
+                        }
+                    }
+
+                    &-blank {
+                        border-top: none;
+                    }
+                }
             }
         }
+    
     }
+
    
-    p {
-        text-align: center;
-    }
 }
